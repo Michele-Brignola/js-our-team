@@ -36,3 +36,33 @@ const teamMembers = [
     img: "img/female3.png",
   },
 ];
+
+function printCards() {
+  const containerElement = document.getElementById("card-section");
+
+  for (const member of teamMembers) {
+    containerElement.innerHTML += generateTeamCard(member);
+  }
+}
+
+function generateTeamCard(member) {
+  const { name, role, email, img } = member;
+
+  const teamCard = `
+    <div class="card-team col">
+      <div style="background-color: black;" class="d-flex">
+        <div class="img-card">
+          <img src="./${img}" alt="${name}" />
+        </div>
+        <div class="text-card text-white p-3">
+          <h3>${name}</h3>
+          <p>${role}</p>
+          <a href="mailto:${email}">${email}</a>
+        </div>
+      </div>
+    </div>`;
+
+  return teamCard;
+}
+
+printCards();
