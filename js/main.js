@@ -50,11 +50,11 @@ function generateTeamCard(member) {
 
   const teamCard = `
     <div class="card-team col">
-      <div style="background-color: black;" class="d-flex">
-        <div class="img-card">
-          <img src="./${img}" alt="${name}" />
+      <div class="d-flex bg-black">
+        <div class="col-4 img-card">
+          <img class="img-fluid" src="./${img}" alt="${name}" />
         </div>
-        <div class="text-card text-white p-3">
+        <div class="text-card text-white p-3 col-8">
           <h3>${name}</h3>
           <p>${role}</p>
           <a href="mailto:${email}">${email}</a>
